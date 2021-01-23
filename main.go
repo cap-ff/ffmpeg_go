@@ -59,15 +59,6 @@ func main() {
 			if cmd.Run() != nil {
 				panic("could not generate frame")
 			}
-			// 获取生成的图片
-			// info, err := os.Stat(pictureSavePath)
-			// if err != nil {
-			// 	fmt.Println("err = ", err)
-			// 	return
-			// }
-
-			// fmt.Println("name = ", info.Name())
-			// fmt.Println("size = ", info.Size())
 
 			// 日志
 			Logfile(pictureSavePath)
@@ -76,30 +67,6 @@ func main() {
 	}
 	fmt.Println("生成结束！")
 	fmt.Scanf(" ")
-
-	// filename := "./thwj.mkv"
-	// //获取视频时长
-	// videoLen, _ := GenerateLength(filename)
-
-	// gt := strconv.Itoa(int(math.Ceil(float64(videoLen) / 3)))
-	// ctx, cancel := context.WithTimeout(context.Background(), time.Duration(50000)*time.Millisecond)
-	// cmd := exec.CommandContext(ctx, "ffmpeg",
-	// 	"-y",
-	// 	"-ss", gt,
-	// 	"-t", "1",
-	// 	"-i", filename,
-	// 	"-s", "122x92",
-	// 	"-vframes", "1",
-	// 	"2.jpg")
-	// defer cancel()
-	// var buffer bytes.Buffer
-	// var stderr bytes.Buffer
-	// cmd.Stderr = &stderr
-	// cmd.Stdout = &buffer
-	// if cmd.Run() != nil {
-	// 	panic("could not generate frame")
-	// }
-	// fmt.Println(stderr.String())
 
 }
 
